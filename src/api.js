@@ -27,10 +27,12 @@ export default class MessageGenerator {
     if (this.stopGeneration) {
       return;
     }
+    const id = faker.random.uuid();
     const message = faker.lorem.sentence();
     const priority = random(1, 3);
     const nextInMS = random(500, 3000);
     this.messageCallback({
+      id,
       message,
       priority,
     });

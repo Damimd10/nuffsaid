@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MessageList from './components/MessageList';
+import Home from './screens/Home';
 
-ReactDOM.render(<MessageList />, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));
