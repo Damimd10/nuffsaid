@@ -31,7 +31,6 @@ const Home = () => {
   useEffect(() => {
     apiRef.current = new Api({
       messageCallback: (currentMessage) => {
-        console.log('HERE ON MESSAGE CALLBACK');
         if (currentMessage.priority === 1) {
           setSnackbarOptions({
             isOpen: true,
@@ -95,7 +94,7 @@ const Home = () => {
         </IconButton>
       </Fragment>
     );
-  }, []);
+  }, [handleCloseSnackbar]);
 
   return (
     <main>
